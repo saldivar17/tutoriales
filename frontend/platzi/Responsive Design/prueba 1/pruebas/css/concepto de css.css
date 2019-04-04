@@ -1,0 +1,241 @@
+/*selector
+===================================
+body {
+    background: pink;       color de fond
+}
+
+Selector descendente
+===================================
+body header div nav ol li a {
+    color: white;
+}
+
+Selector de class: . (Se pude repetir en varias etiquetas)
+===================================
+.link {
+    color: red;
+}
+
+Selector de id: # (solo es unico)
+===================================
+#portafolio {
+    background: red;
+}
+*/
+
+
+/*=============== Fuentes ===============
+font-family: 'tipo de letras', sans-serif;
+font-weight: 400;               grosor de texto
+font-size: 40px;                tamaño de texto
+font-style: italy;              estilo de texto
+
+line-height: 150%               salto de linea
+letter-spacing: 1px             espacio entre letras                
+
+text-transform: uppercase;      poner mayuscula o minuscula, etc
+text-decoration: inherit        decorar texto
+
+*/
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: 400;
+}
+h1 {
+    font-size: 40px;
+    line-height: 150%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: aliceblue;
+}
+
+.hero h1 strong {
+    color: #027fff;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+h3 {
+    text-transform: capitalize;
+}
+
+
+/*=============== Dimensiones ===============
+width: 500px;                   limitar el ancho (horizontal);
+height: 250;                    limitar la altura (vertical);
+*/
+
+.header {
+    background-color: #1b2127;
+    color: white;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    height: 90px;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+}
+
+ol, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header ol {
+    display: flex;
+    height: inherit;
+    align-items: center;
+}
+
+figure {
+    margin: 0;
+}
+
+.header ol li {
+    height: inherit;
+}
+
+.menu {
+    height: inherit;
+}
+
+.header a {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    padding: 0 10px;
+}
+
+/*=============== color ===============
+background-color: red;                          color de fuente
+background-image: url('public/...')             agregar un imagen como fondo
+background-size: (ancho) (altura)               modificar el tamaño del background
+background-repeat: no-repeat                    para repetir o no repetir la imagen de fondo
+background-position-x: roght;                   modificar la ubicacion de background 
+*/
+
+.hero {
+    height: 300px;
+    background-image: url('../public/images/hero.jpg');
+    background-size: 500px, 250px;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-color: #1b2127;
+}
+
+
+
+/*=============== border ===============
+border: width(ancho) style(tipo o stilo) color
+
+border-top: 5px solid red;                      agregar border superior
+border-rigth: width style color                 agregar border derecho     
+border-botton: width style color                agregar border inferior
+border-left: width style color                  agregar border izquierdo
+
+border-color: blue;                             colocar color a todos los bordes
+border-width: 10px;                             grosor para todos los bordes
+border-style: solid                             stilo para todos los bordes
+
+border-top-color: green;                        color al borde superior
+border-botton-color:                            color al borde inferior
+border-rigth-color:                             color al borde derecho
+border-left-color:                              color al borde izquierdo
+
+border-radius: 10px;                            agregar a todas las esquinas redondas a los bordes
+border-top-rigth-radius: 5px                    agregar a la esquina superior derecho un estilo redondeado
+border-top-left-radius:
+border-bottom-rigth-radius:
+border-bottom-left-radius:
+
+*/
+.portfolio {
+    border: 2px solid #027fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+/*=============== margin y padding ===============
+margin: (top) (rigth) (bottom) (left);      
+margin: (top y bottom) ( rigth left);
+margin: (top, rigth, bottom, left);
+margin-top:
+margin-rigth:
+margin-bottom:
+margin-left:
+
+padding: (top) (rigth) (bottom) (left);      
+padding: (top y bottom) ( rigth left);
+padding: (top, rigth, bottom, left); 
+*/
+
+/*=============== display ===============
+display: inline;            en horizontal;
+display: block;             en vertical;
+display: inline-block;
+*/
+
+.portfolio-details {
+    width: 500px;
+    height: 250px;
+    padding: 20px;
+    /* display: inline-block; */
+}
+
+.portfolio-imageContainer {
+    width: 500px;
+    /* display: inline-block; */
+}
+
+
+/*=============== flexbox ===============
+flex-direction: row;                row o column (fila o columna)
+flex-wrap; wrap o no-wrap           mostrar todo el contenido
+flex-shrink: 0                      (0 - 1) cero para que no se modifique y 1 si se midifica  
+
+--horizontal
+justify-content: flex-start         todo el contenido a la izq
+justify-content: flex-end;          todo el contenido a la derecha
+justify-content: center             todo el contenido al centro
+justify-content: space-around;      
+justify-content: space-every
+justify-content: space-berween
+
+--vertical
+align-items: flex-start;
+align-items: flex-end;
+align-items: center;
+align-items: center;
+align-items: basile;
+align-items: stretch;
+
+--modificacion personal
+align-self:flex-start;
+align-self:flex-end;
+align-self:center;
+*/
+
+
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.box {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border: 1px solid blue;
+    flex-shrink: 0;
+}
+
