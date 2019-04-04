@@ -1,0 +1,52 @@
+<% include partials/header %>
+
+<div class="container">
+	<div class="row mt-5">
+		<div class="col-md-5">
+			<div class="card">
+				<div class="card-body">
+					<form action="/add_universidad" method="post">
+
+					<div class="form-group">
+						<input type="text" name="codigo" placeholder="ingrese codigo" class="form-control">
+					</div>
+					<div class="form-group">
+						<input type="text" name="nombre" placeholder="Ingrese nombre" class="form-control">
+					</div>
+					<div class="form-group">
+						<input type="text" name="carrera" placeholder="Ingrese carrera" class="form-control">
+					</div>
+					<div class="form-group">
+						<select name="ciclo" class="form-control">
+							<option>1er Semestre</option>
+							<option>2do Semestre</option>
+							<option>3er Semestre</option>
+							<option>4to Semestre</option>
+							<option>5to Semestre</option>
+							<option>6to Semestre</option>
+							<option>7mo Semestre</option>
+							<option>8vo Semestre</option>
+							<option>9no Semestre</option>
+							<option>10mo Semestre</option>
+							<option>Otros</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<select name="idusu" class="form-control">
+							<% for(var i=0; i < data.length; i++) { %>
+							<option value="data[i].id"><%= data[i].nom %></option>
+							<% } %>
+						</select>
+					</div>
+					<button class="btn btn-primary" type="submit">
+						Save University
+					</button>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<% include partials/footer %>

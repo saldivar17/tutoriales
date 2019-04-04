@@ -1,0 +1,65 @@
+<% include partials/header %>
+
+
+<div class="container">
+	<div class="row mt-2 col-md">
+			<h2>Estudiantes</h2>
+	</div>
+
+	<div class="row mt-3">
+		<div class="col-md-7">
+			<table class="table table-hover">
+				<thead class="table-dark">
+					<th> Nro </th>
+					<th> Name </th>
+					<th> Adderss </th>
+					<th> Age </th>
+					<th><CENTER> Action </CENTER></th>
+				</thead>
+				<tbody class="table-active">
+					<% if (data) { %>
+						<% for(var i=0; i < data.length; i++){ %>
+							<tr>
+								<td> <%= (i+1) %> </td>
+								<td> <%= data[i].nom %> </td>
+								<td> <%= data[i].apellidos %> </td>
+								<td> <%= data[i].edad %> </td>
+								<td>
+									<CENTER>
+									<a href="/update/<%= data[i].id %>" class="btn btn-warning">Edit</a>
+									<a href="/delete/<%= data[i].id %>" class="btn btn-danger">Delete</a>
+									</CENTER>
+								</td>
+							</tr>
+						<% } %>
+					<% } %>
+					
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-5">
+			<div class="card">
+				<div class="card-body">
+					<form action="/add" method="post">
+
+						<div class="form-group">
+							<input type="text" name="nom" placeholder="Name" class="form-control">
+						</div>
+						<div class="form-group">
+							<input type="text" name="apellidos" placeholder="Address" class="form-control">
+						</div>
+						<div class="form-group">
+							<input type="text" name="edad" placeholder="Age" class="form-control">
+						</div>
+						<button type="submit" class="btn btn-primary">
+							Save person
+						</button>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<% include partials/footer %>

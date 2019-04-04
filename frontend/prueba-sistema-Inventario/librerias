@@ -1,0 +1,14 @@
+campos de formularios
+	-area
+	-encargado
+	-nombre
+	-numero de serie
+	-cantidad
+	-descripcion
+	-fecha de entrega
+
+librerias
+	-normalize.css
+	-bootstrap
+	-datatables
+	-prefixfree

@@ -1,0 +1,6 @@
+npm init --yes
+npm install express mysql express-myconnection morgan ejs
+node src/index.js
+npm install nodemon -D 		el nodemon: par que se actulice automaticamente.
+"dev": "nodemon src/index.js"
+npm run dev

@@ -1,0 +1,420 @@
+/*selector
+===================================
+body {
+    background: pink;       color de fond
+}
+
+Selector descendente
+===================================
+body header div nav ol li a {
+    color: white;
+}
+
+Selector de class: . (Se pude repetir en varias etiquetas)
+===================================
+.link {
+    color: red;
+}
+
+Selector de id: # (solo es unico)
+===================================
+#portafolio {
+    background: red;
+}
+*/
+
+
+/*=============== Fuentes ===============
+font-family: 'tipo de letras', sans-serif;
+font-weight: 400;               grosor de texto
+font-size: 40px;                tamaño de texto
+font-style: italy;              estilo de texto
+
+line-height: 150%               salto de linea
+letter-spacing: 1px             espacio entre letras                
+
+text-transform: uppercase;      poner mayuscula o minuscula, etc
+text-decoration: inherit        decorar texto
+
+*/
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: 400;
+}
+
+h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #027fff;
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 150%;
+    letter-spacing: 1px;
+    /* text-transform: uppercase; */
+    color: aliceblue;
+    margin: 0;
+    align-items: center;
+
+}
+
+.hero h1 strong {
+    color: #027fff;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+h3 {
+    text-transform: capitalize;
+}
+
+
+/*=============== Dimensiones ===============
+width: 500px;                   limitar el ancho (horizontal);
+height: 250;                    limitar la altura (vertical);
+*/
+
+.header {
+    background-color: #1b2127;
+    color: white;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    height: 70px;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+}
+
+ol, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header ol {
+    display: flex;
+    height: inherit;
+    align-items: center;
+}
+
+figure {
+    margin: 0;
+}
+
+.header ol li {
+    height: inherit;
+}
+
+.menu {
+    height: inherit;
+}
+
+.header a {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    padding: 10px 10px;
+}
+
+/*=============== color ===============
+background-color: red;                          color de fuente
+background-image: url('public/...')             agregar un imagen como fondo
+background-size: (ancho) (altura)               modificar el tamaño del background
+background-repeat: no-repeat                    para repetir o no repetir la imagen de fondo
+background-position-x: right;                   modificar la ubicacion de background 
+*/
+
+.hero {
+    /*height: 300px;
+    background-image: url('../public/images/hero.jpg');
+    background-size: 500px, 250px;
+    background-repeat: no-repeat; 
+    background-position-x: right;*/
+    background-color: #003f92;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero img{
+    object-fit: cover;
+}
+
+
+
+/*=============== border ===============
+border: width(ancho) style(tipo o stilo) color
+
+border-top: 5px solid red;                      agregar border superior
+border-rigth: width style color                 agregar border derecho     
+border-botton: width style color                agregar border inferior
+border-left: width style color                  agregar border izquierdo
+
+border-color: blue;                             colocar color a todos los bordes
+border-width: 10px;                             grosor para todos los bordes
+border-style: solid                             stilo para todos los bordes
+
+border-top-color: green;                        color al borde superior
+border-botton-color:                            color al borde inferior
+border-rigth-color:                             color al borde derecho
+border-left-color:                              color al borde izquierdo
+
+border-radius: 10px;                            agregar a todas las esquinas redondas a los bordes
+border-top-rigth-radius: 5px                    agregar a la esquina superior derecho un estilo redondeado
+border-top-left-radius:
+border-bottom-rigth-radius:
+border-bottom-left-radius:
+
+*/
+.portfolio {
+    border: 1px solid #D6EAF8;
+    box-shadow: 3px 3px 0px 1px #027fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*=============== margin y padding ===============
+margin: (top) (rigth) (bottom) (left);      
+margin: (top y bottom) ( rigth left);
+margin: (top, rigth, bottom, left);
+margin-top:
+margin-rigth:
+margin-bottom:
+margin-left:
+
+padding: (top) (rigth) (bottom) (left);      
+padding: (top y bottom) ( rigth left);
+padding: (top, rigth, bottom, left); 
+*/
+
+/*=============== display ===============
+display: inline;            en horizontal;
+display: block;             en vertical;
+display: inline-block;
+*/
+
+.portfolio-project {
+    padding: 20px;
+}
+.portfolio-course,
+.portfolio-date,
+.portfolio-url {
+    margin: 5px 0;
+}
+
+.portfolio-title {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.portfolio-details {
+    width: 500px;
+    height: 250px;
+    padding: 20px;
+}
+
+.portfolio-imageContainer {
+    width: 500px;
+    /* display: inline-block; */
+}
+
+/*=============== flexbox ===============
+flex-direction: row;                row o column (fila o columna)
+flex-wrap; wrap o no-wrap           mostrar todo el contenido
+flex-shrink: 0                      (0 - 1) cero para que no se modifique y 1 si se midifica  
+
+--horizontal
+justify-content: flex-start         todo el contenido a la izq
+justify-content: flex-end;          todo el contenido a la derecha
+justify-content: center             todo el contenido al centro
+justify-content: space-around;      
+justify-content: space-every
+justify-content: space-berween
+
+--vertical
+align-items: flex-start;
+align-items: flex-end;
+align-items: center;
+align-items: center;
+align-items: basile;
+align-items: stretch;
+
+--modificacion personal
+align-self:flex-start;
+align-self:flex-end;
+align-self:center;
+*/
+
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.box {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border: 1px solid blue;
+    flex-shrink: 0;
+}
+
+.event-project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.event {
+    /* border: 2px solid #027fff; */
+    margin: 20px;
+    width: 480px;
+    border-radius: 5px;
+    overflow: hidden;           /*para objeto que se desbordan*/
+    flex-shrink: 0;
+    background: #e4ebfb; 
+}
+
+.event img {
+    width: 480px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.event-details {
+    margin: -40px 30px 20px 30px;
+    padding: 10px;
+    padding-bottom: 20px;
+    background: white;
+    position: relative;
+    text-align: center;
+    box-shadow: 3px 3px 0px 1px #D6EAF8;
+}
+.event-description {
+    text-align: left;
+}
+
+.event-url{
+    text-decoration: none;
+    color: #027fff;
+    border: 2px solid;
+    font-weight: bold;
+    padding: 8px 30px;
+    border-radius: 5px;
+    text-transform: capitalize; 
+}
+
+
+.contact-project {
+    background: #027fff;
+    color: white;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contact-project h2 {
+    color: white;
+}
+
+.social {
+    justify-content: flex-end;
+}
+.social-link  {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    background-size: 50px 50px;
+}
+
+.social-link.twitter {
+    background-image: url('../public/images/twitter.svg');
+}
+.social-link.facebook {
+    background-image: url('../public/images/facebook.svg');
+}
+.social-link.github {
+    background-image: url('../public/images/github.svg');
+}
+.social-link.instagram {
+    background-image: url('../public/images/instagram.svg');
+}
+
+.contact-form {
+    margin-left: 10px;
+}
+.contact-form button {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: transparent;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    color: white;
+    padding: 5px 0;
+    width: 150px;
+    /* margin: 10px auto 0; */
+}
+
+.contact-form input{
+    border-width: 1px;
+    border-color: grey;
+    border-style: solid;
+    padding: 5px 30px;
+    background-image: url('../public/images/envelope.svg');
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 5px;
+    border-radius: 5px;
+}
+
+.footer {
+    color: white;
+    background-color: #1b2127;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer img{
+    vertical-align: middle;
+}
+
+.footer a{
+    color: #027fff;
+    text-decoration: none;
+}
+
+.footer div{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.container {
+    /* border: 1px solid red; */
+    width: 1100px;
+    margin: 0 auto;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    height: inherit;
+    flex-wrap: inherit;
+}
+
+.otro {
+    background: red;
+}
