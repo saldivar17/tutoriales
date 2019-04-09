@@ -179,6 +179,7 @@ border-bottom-left-radius:
 
 */
 .portfolio {
+    max-width: 1000px;
     border: 1px solid #D6EAF8;
     box-shadow: 3px 3px 0px 1px #027fff;
     border-radius: 5px;
@@ -209,6 +210,7 @@ display: inline-block;
 */
 
 .portfolio-project {
+    
     padding: 20px;
 }
 .portfolio-course,
@@ -320,6 +322,7 @@ align-self:center;
 
 
 .contact-project {
+    
     background: #027fff;
     color: white;
     height: 150px;
@@ -390,6 +393,7 @@ align-self:center;
 .footer {
     color: white;
     background-color: #1b2127;
+    max-width: 1000px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -411,7 +415,7 @@ align-self:center;
 
 .container {
     /* border: 1px solid red; */
-    max-width: 1100px;
+    max-width: 1000px;
     flex: 1;
     margin: 0 auto;
     display: inherit;
@@ -426,7 +430,24 @@ align-self:center;
 }
 
 @media screen and (max-width: 1024px){}
-@media screen and (max-width: 768px){}
+@media screen and (max-width: 767px){
+    .header{
+        display: block;
+        height: auto;
+    }
+    .header ol{
+        display: initial;
+    }
+    .header ol li {
+        height: 50px;
+    }
+    .header a{
+        justify-content: center;
+    }
+    .header .logo{
+        text-align: center;
+    }
+}
 @media screen and (max-width: 480px){}
 @media screen and (max-width: 360px){}
 
